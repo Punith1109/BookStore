@@ -1,0 +1,90 @@
+.logindiv{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: grey;
+}
+.shopimg{
+    position: absolute;
+    background-color: white;
+    width: 27vw;
+    height: 52vh;
+    margin-left: 26vw;
+    margin-top: 23vh;
+    border-radius: 2px;
+    overflow: hidden;
+    
+}
+.form{
+    position: absolute;
+    display: flex;
+    background-color:white;
+    margin-left: 51vw;   
+    margin-top:13vh;
+    height: 73vh;
+    width: 40vw;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    overflow: hidden;
+    
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+.full{
+    width: 80%;
+   
+}
+#loginlabel{
+    font-size: larger;
+    font-weight: 700;
+}
+.example-form{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+
+   
+    overflow: hidden;
+   margin-left: 0;
+
+}
+
+.loginform{
+    position: relative;
+   
+    margin-left:6vw;
+    margin-top: 2vh;
+   
+}
+.forgotpassword{
+    border: 3px soild grey;
+    /* background-color: aquamarine; */
+    margin-left: 16vw;
+    color: rgba(128, 128, 128, 0.6);
+   
+}
+.loginbtn{
+    /* background-color: blue; */
+    
+}
+.mat-raised-button{
+    width:20vw
+}
+#myimg{
+    width: 80%;
+    height: 80%;
+    margin-left: 2vw;
+    margin-top: 1vw;
+    border-radius: 200px;
+    object-fit: cover;
+}
+.signupform{
+    border: 2px soild red;
+    /* background-color: aquamarine; */
+    position: relative;
+   
+    margin-left:6vw;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+}

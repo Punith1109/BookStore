@@ -1,0 +1,10 @@
+.searchbar{
+    width: 100%;
+    background-color: rgb(219, 42, 42);
+    height: 7vh;
+}
+#search{
+    justify-items: center;
+    margin-left: 30vw;
+    
+}
