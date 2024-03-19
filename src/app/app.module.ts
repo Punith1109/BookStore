@@ -9,11 +9,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
+import { BooksComponent } from './Mycomponents/books/books.component';
 @NgModule({
   declarations: [
     AppComponent,
     BooksContainerComponent,
-    LoginComponent
+    LoginComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +26,10 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatTabsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

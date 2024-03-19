@@ -11,23 +11,23 @@
       <mat-tab label="Login">
 
         <div class="loginform">
-          <form class="example-form">
-            <mat-label>Email id</mat-label>
-            <mat-form-field class="example-full-width" apperaence="outline">
-
-              <input matInput style="height: 3vh !important;" placeholder="Enter Your Email...." value="">
+          <form [formGroup]="loginForm" (ngSubmit)="loginUser()" class="example-form">
+            <mat-label>Email</mat-label><br>
+            <mat-form-field class="example-full-width" style="width: 100%;" appearance="outline">
+              <input formControlName="email" matInput placeholder="Enter Your Email" style="height: 2vh;">
             </mat-form-field>
+            <div style="color:red;" *ngIf="submitted && f?.['email']?.errors?.['required'] ">Email is required</div>
 
-            <mat-label>Password</mat-label>
-            <mat-form-field class="example-full-width" appearaence="outline">
-
-              <textarea matInput placeholder="Enter Your Password....................."></textarea>
+            <mat-label style="margin-top: 2vh;">Password</mat-label><br>
+            <mat-form-field class="example-full-width" style="width: 100%;" appearance="outline">
+              <input formControlName="password" matInput placeholder="Enter Your Password" style="height: 2vh;">
             </mat-form-field>
+            <div style="color:red;" *ngIf="submitted && f?.['password']?.errors?.['required'] ">Password is required</div>
             <div class="forgotpassword">
               <mat-label>Forgot Password?</mat-label>
             </div>
             <div class="loginbtn">
-              <button mat-raised-button style="width: 26vw;  background-color: #A03037;" color="warn">
+              <button type="submit" mat-raised-button style="width: 26vw;  background-color: #A03037;" color="warn">
                 Login</button>
             </div>
             <h1 style="font-weight: lighter;">_____________OR_____________</h1>
@@ -39,63 +39,16 @@
 
         </div>
       </mat-tab>
-
-      <!-- <mat-tab label="Signup">
-        <div class="signupform">
-          <form class="example-form">
-            <table class="example-full-width" cellspacing="0">
-              <tr>
-                <td>
-                  <mat-label>Full name</mat-label><br>
-                  <mat-form-field class="example-full-width" style="width: 100%;" appearaence="outline">
-
-                    <input matInput>
-                  </mat-form-field>
-                </td>
-
-              </tr>
-            </table>
-
-            <p> <mat-label>Email_Id</mat-label><br>
-              <mat-form-field class="example-full-width" style="width: 100%;" appearaence="outline">
-
-                <textarea matInput placeholder=""></textarea>
-              </mat-form-field>
-              <mat-label>Password</mat-label><br>
-              <mat-form-field class="example-full-width">
-
-                <textarea matInput placeholder="Enter Your Email" style="height: 1vh !important;" style="width: 100%;"
-                  appearaence="outline"></textarea>
-              </mat-form-field>
-            </p>
-
-            <table class="example-full-width" cellspacing="0">
-              <tr>
-                <td> <mat-label>Mobile Number</mat-label>
-                  <mat-form-field class="example-full-width" style="width: 100%;" appearaence="outline">
-
-                    <input matInput placeholder="Ex. San Francisco">
-                  </mat-form-field>
-                </td>
-
-
-              </tr>
-            </table>
-          </form>
-
-        </div>
-
-
-      </mat-tab> -->
       <mat-tab label="Signup">
         <div class="signupform">
-          <form class="example-form">
+          <form class="example-form" [formGroup]="RegistrationForm" (ngSubmit)="registerUser()">
             <table class="example-full-width" cellspacing="0">
               <tr>
                 <td>
                   <mat-label>Full name</mat-label><br>
                   <mat-form-field class="example-full-width" style="width: 100%;" appearance="outline">
-                    <input matInput placeholder="Enter Your Name" style="height: 2vh;">
+                    <input matInput formControlName="fullname" placeholder="" style="height: 2vh;">
+                    <div style="color:red;" *ngIf="usubmitted && k?.['fullname']?.errors?.['required'] ">Name is required</div>
                   </mat-form-field>
                 </td>
               </tr>
@@ -105,12 +58,14 @@
 
               <mat-label>Email Id</mat-label><br>
               <mat-form-field class="example-full-width" style="width: 100%;" appearance="outline">
-                <input matInput placeholder="Enter Your Email......" style="height: 2vh;">
+                <input matInput formControlName="useremail" placeholder="" style="height: 2vh;">
+                <div style="color:red;" *ngIf="usubmitted && k?.['useremail']?.errors?.['required'] ">Email is required</div>
               </mat-form-field>
 
               <mat-label>Password</mat-label><br>
               <mat-form-field class="example-full-width" style="width: 100%;" appearance="outline">
-                <input matInput placeholder="Enter Your Password......" style="height: 2vh;">
+                <input formControlName="userpassword" matInput placeholder="" style="height: 2vh;">
+                <div style="color:red;" *ngIf="usubmitted && k?.['userpassword']?.errors?.['required'] ">Password is required</div>
               </mat-form-field>
             </p>
 
@@ -119,12 +74,13 @@
                 <td>
                   <mat-label>Mobile Number</mat-label>
                   <mat-form-field class="example-full-width" style="width: 100%;" appearance="outline">
-                    <input matInput placeholder="Ex. San Francisco" style="height: 2vh;">
+                    <input formControlName="phone" matInput placeholder="" style="height: 2vh;">
+                    <div style="color:red;" *ngIf="usubmitted && k?.['phone']?.errors?.['required'] ">Mobile Number  is required</div>
                   </mat-form-field>
                 </td>
               </tr>
             </table>
-            <button mat-raised-button color="warn" style="background-color: #A03037">Signup</button>
+            <button type="submit" mat-raised-button color="warn" style="background-color: #A03037">Signup</button>
           </form>
         </div>
       </mat-tab>

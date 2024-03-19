@@ -1,3 +1,24 @@
 <div class="searchbar">
-    <input type="search" id="search">
+    <div id="bookimg">
+
+        <img src="../../../assets/education.png" style="width: 3vw; height: 5vh;">
+        <div id="bookstore" style="color: white; font-weight: lighter;">
+            <h2 style="font-weight: lighter;">Bookstore</h2>
+        </div>
+    </div>
+    <input type="search" placeholder="search......" style="font-size: 2.45vh;" id="search">
+    <mat-icon aria-hidden="false" aria-label="Example person icon" style="color: white;font-size:4vh " fontIcon="person"
+        id="person-icon"></mat-icon>
+
+
+
+    <mat-icon id="cart-icon" style="color:white; font-size:4vh;">shopping_cart</mat-icon>
+    <span style="color: white; ">Cart</span>
 </div>
+
+<div class="books-container">
+    <div *ngFor="let book of books" class="book-box">
+        <p>{{ book.description }}</p>
+    </div>
+</div>
+<!-- <app-books [bookdetails]="books"></app-books> -->

@@ -1,10 +1,58 @@
 .searchbar{
     width: 100%;
-    background-color: rgb(219, 42, 42);
-    height: 7vh;
+    background-color:#A03037;
+    height: 10vh;
 }
 #search{
     justify-items: center;
-    margin-left: 30vw;
+    /* display: flex; */
+    margin-left: 20vw;
+    width: 35vw;
+    height: 6vh;
+    margin-top: 2vh;
+}
+
+#bookimg{
+    display: flex;
+    position: absolute;
+    margin-top: 3vh;
+    margin-left: 4%;
+ 
+}
+#bookstore{
+    font-size: larger;
+    border: 2px soid rebeccapurple;
+    margin-top: -2.5vh;
+    margin-left: 0.5vw;
     
+}
+#person-icon{
+margin-left: 15vw;
+font-size: 4.5vh;
+font-size: 4.5vh;
+}
+
+#cart-icon{
+margin-left: 5vw;
+font-size: 5vw;
+font-size: 4vh;
+}
+.books-container {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap:wrap;
+    align-items: stretch; 
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
+.book-box {
+    border: 2px solid black; /* Adjust as needed */
+    padding: 4vw; /* Adjust as needed */
+    margin-left: 0.5vw;
+    
+    margin-bottom: 0.5vh;
+    width: 10vw;
+    height: 7vh;
+    overflow: hidden;
 }
