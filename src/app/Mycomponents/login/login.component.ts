@@ -61,7 +61,7 @@ export class LoginComponent {
       .subscribe((result:any) => {
         localStorage.setItem("token",result.result.accessToken);
         console.log(result.result.accessToken);
-    this.router.navigate([''])
+        this.router.navigate(['/bookstore/dashboard'])
       });
   }
 

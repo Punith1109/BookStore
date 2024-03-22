@@ -1,12 +1,97 @@
-<!-- <div id="cnt">
-
-<div class="booksdiv">
-    <p>{{bookdetails.description}}</p>
+<div class="header" style="height: 6vh; border: 2px solid green; margin-left: 8vw;">
+   <span routerLink="/dashboard/books">Home/</span> <span>Books</span>
 </div>
+<div class="main" style="margin-left: 8vw;">
+    <div class="sideimages" style="display: flex; height: 5vh; width: 4vw;">
+        <div class="image1" style="">
+            <img src="../../../assets/001.jpg" style="position: absolute; width: 3.8vw;height: 10vh; border: 1px solid pink; margin-right: 6vw;padding: 0.5vw;">
+        </div>
+        <div class="image2">
+            <img src="../../../assets/002.jpg" style=" position:absolute;width: 3.8vw; margin-top: 3.1vh; border: 1px solid pink; padding: 0.5vw; margin-right: 6vw;" alt="">
+        </div>
+    </div>
+    <div class="content">
+        <div class="bookname">
+            <h1 style="font-weight: 500; font-size: 2.3rem;">Don't Make me Think</h1>
+        </div>
 
-</div> -->
+        <div class="writtenby">
+            <span style="font-weight: lighter; color: grey; font-size: 1.2rem;margin-bottom: vh; ">by Steve Krug</span>
+        </div>
+        <div class="rating">
+            <span style="background-color: rgb(9, 126, 9); padding-right: 1vw; color: white;">4.5
+                <mat-icon id="star" style="font-size: 0.79vw; position: absolute;">star</mat-icon></span><span
+                style="font-weight: lighter;margin-left: 0.25vw; color: grey;">(20)</span>
+        </div>
+        <div class="price">
+            <span style=" margin-top: 2vh; position: absolute; font-size: 1.5rem; font-weight: bold;"> Rs.1500
+                <span class="line-through"> Rs.1500</span></span>
+        </div>
+        <div class="bookdetails" style="margin-top: 10vh;">
+            <hr>
+            <span style="font-size: 1.5rem; font-weight: lighter; color: grey;">
+                <ul style="margin-left:-1.2vw;">
+                    <li style="margin-left:0px">Book Details</li>
+                </ul>
+            </span>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ullam molestias aperiam perspiciatis
+                iusto tenetur, ex architecto laborum magni laudantium dignissimos reprehenderit voluptas quibusdam natus
+                quo harum vel ea odio.
+            </p>
+        </div>
+        <hr>
+        <div class="customer">
+            <h2 style="font-size: 1.9rem; font-weight: 200; ">Customer Feedback</h2>
 
-<!-- <div *ngFor="let book of bookdetails">
-    <p>{{ book }}</p>
-  </div> -->
-  
+            <div class="c" style="height: 30vh; background-color: rgb(243, 239, 239);">
+                <span style="font-weight: 400; margin-top: 2vh; font-size: 1.5rem;">Overall rating</span><br>
+                <span style="margin-top:2vh ; position: absolute;"><mat-icon>star</mat-icon></span>
+                <input type="text" placeholder="Enter your feedback"
+                    style="margin-top: 6vh; height: 10vh;width: 39.5vw; border: 0px soild black;">
+                <button mat-raised-button color="primary"
+                    style="margin-left: 33.1vw; margin-top: 4vh; width: 6vw;">Submit</button>
+            </div>
+
+        </div>
+        <div class="customers">
+            <div class="circle"
+                style="border: 1px black; border-radius: 50%; display:flex; background-color: lightgray; width: 2.5vw; height: 4vh; margin-top: 7.89vh;">
+                <span style="margin-left: 0.5vw; margin-top: 1vh; color: gray;">AC</span><span
+                    style="display: inline; margin-left: 2vw; font-size: 1.2rem;">Aniketv_Canfijf </span>
+            </div>
+            <span>⭐⭐⭐⭐</span>
+            <span>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut accusamus magnam quasi quae? Eligendi
+                    cumque saepe hic eveniet quaerat libero, quae dolorem aliquam, eos illum quidem facere ea
+                    reprehenderit necessitatibus?</p>
+            </span>
+            <div class="circle"
+                style="border: 1px black; border-radius: 50%; display:flex; background-color: lightgray; width: 2.5vw; height: 4vh; margin-top: 7.89vh;">
+                <span style="margin-left: 0.5vw; margin-top: 1vh; color: gray;">GK</span><span
+                    style="display: inline; margin-left: 2vw; font-size: 1.2rem;">Gkjseb_Smand </span>
+            </div>
+            <span>⭐</span>
+            <span>
+                <p>Lorem ipsum dolor, sit am
+                    et consectetur adipisicing elit. Ut accusamus magnam quasi quae? Eligendi
+                    cumque saepe hic eveniet quaerat libero, quae dolorem aliquam, eos illum quidem facere ea
+                    reprehenderit necessitatibus?</p>
+            </span>
+        </div>
+
+    </div>
+    <div class="images"
+        style="border: 1px solid pink; width: 30vw; height: 80vh; display: flex; margin-left: 5vw; margin-top: -5vh;">
+        <img src="../../../assets/001.jpg" style="margin: 3vw;  width: 40vw; height: 65vh;" alt="">
+        <div class="button"
+            style="position: absolute; border:0; display: flex; height: 10vh; width: 31vw; margin-top: 81vh;">
+            <button mat-raised-button color="warn" style="width: 15vw;height: 7vh; background-color: #8F2B2F;"><span
+                    style="font-size: 1.4rem;">ADD TO BAG</span></button>
+            <button mat-button color="primary" style="background-color: lightgrey; width: 15vw; height: 7vh;"><span
+                    style="font-size: 1.4rem;">WISHLIST</span></button>
+        </div>
+    </div>
+
+
+</div>

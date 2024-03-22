@@ -1,0 +1,21 @@
+.searchbar{
+    width: 100%;
+    background-color:#A03037;
+    height: 10vh;
+}#search{
+    justify-items: center;
+    /* display: flex; */
+    margin-left: 20vw;
+    width: 35vw;
+    height: 6vh;
+    margin-top: 2vh;
+}
+
+#bookimg{
+    display: flex;
+    width: 40vw;
+    position: absolute;
+    margin-top: 3vh;
+    margin-left: 4%;
+ 
+}
