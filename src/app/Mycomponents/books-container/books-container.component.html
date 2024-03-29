@@ -1,48 +1,47 @@
 <div>
-<div class="cnt" style="margin-left: 8.5vw; font-weight: lighter; display: flex;">
-    <h2>Books</h2>
-    <mat-accordion class="expansion-cnt" style="position: absolute; width: 13vw; margin-left: 70vw; z-index: 1; margin-top: 1vh;">
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Sort by relevance
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p>Price : Low to High</p>
-          <p>Price : High to Low</p>
-          <p>Newest Arrivals</p>
-          </mat-expansion-panel>
-      </mat-accordion>  
-</div>
-
-
-
-<div class="books-container" >
-    <div *ngFor="let book of books" class="book-box" (click)="gotobooks(book._id)">
-        <div class="bookimage" >
-            <img src="../../../assets/001.jpg" style="margin-left: 3vw; margin-top: 2vh; width: 13vw;">
-           
-        </div>
-        <div class="content" style="margin-top: 38.5vh;">
-        <div class="bookname">
-            <span style=" margin-left: 1vw; ">{{book.bookName}}</span>
-        </div>
-        <div class="writtenby">
-            <span style="font-weight: lighter; margin-left: 1vw; margin-bottom: 1vh; color: lightslategray;">{{book.author}}</span>
-        </div>
-        <div class="rating">
-            <span
-                style="background-color: rgb(9, 126, 9); padding-left: 0.25vw; padding-right: 0.25vw; margin-left: 1vw; color: white;">{{book.quantity}}
-                <mat-icon id="star" style="font-size: 0.79vw;">star</mat-icon></span><span
-                style="font-weight: lighter;margin-left: 0.25vw; color: grey;">(20)</span>
-        </div>
-
-        <div class="price">
-            <span
-                style=" margin-left: 1vw; margin-top: 1.25vh; position: absolute; font-weight: bold;">Rs.{{book.discountPrice}}
-                <span class="line-through">Rs. {{book.price}}</span></span>
-        </div>
+    <div class="cnt" style="margin-left: 8.5vw; font-weight: lighter; display: flex;">
+        <h2>Books</h2>
+        <mat-accordion class="expansion-cnt" style="position: absolute; width: 13vw; margin-left: 70vw; z-index: 1; margin-top: 1vh;">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Sort by relevance
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>Price : Low to High</p>
+                <p>Price : High to Low</p>
+                <p>Newest Arrivals</p>
+            </mat-expansion-panel>
+        </mat-accordion>
     </div>
+
+    <div class="books-container">
+        <div *ngFor="let book of booksToDisplay" class="book-box" (click)="gotobooks(book._id)">
+            <div class="bookimage">
+                <img src="../../../assets/001.jpg" style="margin-left: 3vw; margin-top: 2vh; width: 13vw;">
+            </div>
+            <div class="content" style="margin-top: 38.5vh;">
+                <div class="bookname">
+                    <span style=" margin-left: 1vw; ">{{book.bookName}}</span>
+                </div>
+                <div class="writtenby">
+                    <span style="font-weight: lighter; margin-left: 1vw; margin-bottom: 1vh; color: lightslategray;">{{book.author}}</span>
+                </div>
+                <div class="rating">
+                    <span
+                        style="background-color: rgb(9, 126, 9); padding-left: 0.25vw; padding-right: 0.25vw; margin-left: 1vw; color: white;">{{book.quantity}}
+                        <mat-icon id="star" style="font-size: 0.79vw;">star</mat-icon></span><span
+                        style="font-weight: lighter;margin-left: 0.25vw; color: grey;">(20)</span>
+                </div>
+
+                <div class="price">
+                    <span
+                        style=" margin-left: 1vw; margin-top: 1.25vh; position: absolute; font-weight: bold;">Rs.{{book.discountPrice}}
+                        <span class="line-through">Rs. {{book.price}}</span></span>
+                </div>
+            </div>
+        </div>
+        <mat-paginator [length]="books.length" [pageSizeOptions]="[8, 16, 20]" [pageSize]="8" (page)="onPageChange($event)" aria-label="Select page">
+        </mat-paginator>
     </div>
-</div>
 </div>

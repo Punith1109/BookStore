@@ -19,3 +19,9 @@
     margin-left: 4%;
  
 }
+
+#person-icon{
+    position: absolute;
+    margin-left: 20vw;
+    margin-top: 2vh;
+}

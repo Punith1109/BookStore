@@ -8,11 +8,18 @@
     </div>
     <input type="search" placeholder="search......" style="font-size: 2.45vh;" id="search">
     <mat-icon aria-hidden="false" aria-label="Example person icon" style="color: white;font-size:4vh " fontIcon="person"
-        id="person-icon"></mat-icon>
-
-
-        <a routerLink="/bookstore/dashboard" routerLinkActive="active"></a>
-    <mat-icon id="cart-icon" style="color:white; font-size:4vh;">shopping_cart</mat-icon>
-    <span style="color: white; ">Cart</span>
+        id="person-icon">
+    </mat-icon>
+    <span style="color: white; position: absolute; margin-left: 19.7vw; margin-top: 6.5vh; font-weight: 150;">Profile</span>
+    
+            <mat-icon id="cart-icon"
+                style="color:white; font-size:4vh; width: 4vw; height: 3vh; padding: 1vw; margin-left: 30vw
+                ">shopping_cart
+            </mat-icon>
+            <div style="display: inline; position: relative; right: 5vw; top: 2vh; margin-top: 7.5vh;">
+                <span style="z-index: 1; font-weight: 100; color: white;">Cart</span>
+         
+      
+    </div>
 </div>
 <router-outlet></router-outlet>

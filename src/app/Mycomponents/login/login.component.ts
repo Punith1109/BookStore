@@ -56,12 +56,13 @@ export class LoginComponent {
       .loginUser({
         "email": email,
         "password": password,
-        // "accessToken":"accessToken"
+        "accessToken":"accessToken"
       })
       .subscribe((result:any) => {
+        if(result.result && result.result.accessToken){
         localStorage.setItem("token",result.result.accessToken);
         console.log(result.result.accessToken);
-        this.router.navigate(['/bookstore/dashboard'])
+        this.router.navigate(['/bookstore/dashboard'])}
       });
   }
 

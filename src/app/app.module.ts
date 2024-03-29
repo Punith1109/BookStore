@@ -9,12 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { BooksComponent } from './Mycomponents/books/books.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { BookstoreComponent } from './Mycomponents/bookstore/bookstore.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,9 @@ import { BookstoreComponent } from './Mycomponents/bookstore/bookstore.component
     ReactiveFormsModule,
     HttpClientModule,
     MatIconModule,
-    MatExpansionModule
+    MatExpansionModule,
+    FormsModule,
+    MatPaginatorModule
 
   ],
   providers: [],

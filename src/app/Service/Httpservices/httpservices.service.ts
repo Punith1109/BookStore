@@ -24,4 +24,10 @@ private authHeader= new HttpHeaders({
   getbookAPi() {
     return this.http.get(`${this.baseUrl}/bookstore_user/get/book`);
 }
+
+postfeedbackapi(id:string, data:Object){
+  
+ return this.http.post(`${this.baseUrl}/bookstore_user/add/feedback/${id}`,data, {headers:this.authHeader});
+}
+
 }

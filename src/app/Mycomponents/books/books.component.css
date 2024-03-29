@@ -42,4 +42,16 @@
     color: grey;
     font-weight: lighter;
      text-decoration: line-through
-}
+}.star-rating {
+    display: inline-block;
+    color:white;
+    font-size: 24px; /* Adjust as needed */
+  }
+  
+.mat-icon {
+    cursor: pointer;
+  }
+  
+.mat-icon.filled {
+    color: gold; /* Adjust as needed */
+  }
