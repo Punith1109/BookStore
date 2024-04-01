@@ -21,9 +21,9 @@
     background-color:white;
     margin-left: 51vw;   
     margin-top:13vh;
-    height: 73vh;
-    width: 40vw;
-    /* border: 2px solid red; */
+    height: 77vh;
+    width: 30vw;
+    border: 2px solid red;
     border-radius: 10px;
     overflow: hidden;
     
@@ -31,7 +31,12 @@
 }
 .full{
     width: 80%;
+
    
+}
+.formdiv{
+margin-left: 4.5vw;
+margin-top: 4vh;
 }
 #loginlabel{
     font-size: larger;
@@ -52,14 +57,15 @@
 .loginform{
     position: relative;
    
-    margin-left:6vw;
+    margin-left:0vw;
     margin-top: 2vh;
    
 }
 .forgotpassword{
     border: 3px soild grey;
     /* background-color: aquamarine; */
-    margin-left: 16vw;
+    margin-left: 12vw;
+    margin-top: -1vh;
     color: rgba(128, 128, 128, 0.6);
    
 }
@@ -70,6 +76,8 @@
 .mat-raised-button{
     width:20vw
 }
+
+
 #myimg{
     width: 80%;
     height: 80%;
@@ -80,10 +88,7 @@
 }
 .signupform{
     border: 2px soild red;
-    /* background-color: aquamarine; */
     position: relative;
-   
-    margin-left:6vw;
     margin-top: 2vh;
     display: flex;
     flex-direction: column;

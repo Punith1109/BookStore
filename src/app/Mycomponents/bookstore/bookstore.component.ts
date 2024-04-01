@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bookstore',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class BookstoreComponent {
 
+  constructor(private router: Router) {}
+
+  goToCartPage(): void {
+    this.router.navigate(['/bookstore/cart']); 
+  }
 }

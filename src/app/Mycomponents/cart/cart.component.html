@@ -1,0 +1,65 @@
+<div class="main">
+    <div class="nav-cnt">
+        <span routerLink="/bookstore/dashboard">Home/ </span><span>My cart</span>
+    </div>
+    <div class="cart">
+        <span class="mycart">MYCART(01)</span>
+        <select matNativeControl class="mat-nav">
+            <option value="add1">SRM Nagar, Potheri, Kattankulathur, 603203</option>
+        </select>
+
+        <div class="details" *ngFor="let book of books; let i=index"
+            style="display: flex; flex-direction: row; margin-bottom: 1vw;">
+            <div class="imgdiv">
+                <img src="../../../assets/001.jpg" alt="" class="img">
+            </div>
+            <div class="info">
+                <div class="bookname">
+                    <h3>{{book.bookName}}</h3>
+                </div>
+                <div class="author">
+                    <span style="font-weight: 100;">by {{book.author}}</span>
+                </div>
+                <div class="price">
+                    <span
+                        style=" margin-left: 1vw; margin-top: 1.25vh; position: absolute; font-weight: light;">Rs.{{book.discountPrice}}
+                        <span class="line-through">Rs. {{book.price}}</span></span>
+                </div>
+                <div style="display:flex; margin-top: 6vh;">
+                    <button style="border-radius:50%; border:1px solid #DBDBDB; width:2vw;height: 4vh;">-</button>
+                    <div
+                        style="width:3.5vw; display: flex; justify-content: center; align-items: center; border: 1px solid #DBDBDB;">
+                    </div>
+                    <button style="border-radius:50%; border:1px solid #DBDBDB; width:2vw; height: 4vh;">+</button>
+                    <label style="margin-left: 5vw;" (click)="removebook(cartdetails[i]._id,i)">Remove</label>
+                </div>
+
+            </div>
+        </div>
+        <div class="button"><button mat-flat-button color="primary" (click)="placeorder()">PLACE ORDER</button></div>
+    </div>
+
+    <div class="address" style="height: 30vh;">
+        <!-- <div class="ddress" *ngIf="!isOrderPlaced">
+                Address Details
+            </div> -->
+        <div class="addressform" *ngIf="!isOrderPlaced">
+            <div class="customer" style="display: flex; flex-direction: row;">
+                <span style="font-size: 1.4rem; width: 10vw;">Customer_Details</span>
+                <div class="addnewaddress" style="border: 1px solid red; width: 10vw; height: 4vh; margin-left: 30vw;">
+                    Add New Addres
+                </div>
+            </div>
+            <div class="name_mobile" style="display: flex;">
+                <div class="fullname" style="margin-left: 1vw;">
+                    <mat-label>Full Name</mat-label><br>
+                    <input type="text" style="height: 7vh; width: 20vw;">
+                </div>
+                <div class="mobile" style="margin-left: 1vw;">
+                    <mat-label>Mobile Number</mat-label>
+                    <input type="text" style="height: 7vh; width: 20vw;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

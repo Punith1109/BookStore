@@ -2,10 +2,11 @@
     width: 100%;
     background-color:#A03037;
     height: 10vh;
+   
 }#search{
     justify-items: center;
     /* display: flex; */
-    margin-left: 20vw;
+    margin-left: 25vw;
     width: 35vw;
     height: 6vh;
     margin-top: 2vh;
@@ -13,15 +14,42 @@
 
 #bookimg{
     display: flex;
-    width: 40vw;
+    width: 20vw;
     position: absolute;
     margin-top: 3vh;
-    margin-left: 4%;
+    margin-left: 10vw;
+    border: 4px soild black;
  
 }
 
 #person-icon{
-    position: absolute;
-    margin-left: 20vw;
+    position: relative;
+    margin-left: 4vw;
     margin-top: 2vh;
+    font-size: 4vh;
+}
+.icons{
+    width: 25vw;
+    height: 10vh;
+    margin-left:70vw;
+    margin-top: -8vh;
+}
+
+.content {
+    position: relative;
+    margin-top: 0%;
+    width: 100vw;
+    height: 10vh;
+    background-color: #2E1D1E;
+}
+
+#copyright-content {
+    color: white;  
+    margin: 0px 160px;
+    padding-top: 18px;
+}
+.footer{
+
+    position: relative;
+    margin-top: 30%;
 }

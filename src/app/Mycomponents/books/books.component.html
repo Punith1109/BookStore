@@ -1,13 +1,16 @@
 <div class="header" style="height: 6vh; border: 2px solid green; margin-left: 8vw;">
-   <span routerLink="/bookstore/dashboard" style="color: lightgrey;">Home/</span> <span>Books</span>
+    <span routerLink="/bookstore/dashboard" style="color: lightgrey;">Home/</span> <span>Books</span>
 </div>
 <div class="main" style="margin-left: 8vw;">
     <div class="sideimages" style="display: flex; height: 5vh; width: 4vw;">
         <div class="image1" style="">
-            <img src="../../../assets/001.jpg" style="position: absolute; width: 3.8vw;height: 10vh; border: 1px solid pink; margin-right: 6vw;padding: 0.5vw;">
+            <img src="../../../assets/001.jpg"
+                style="position: absolute; width: 3.8vw;height: 10vh; border: 1px solid pink; margin-right: 6vw;padding: 0.5vw;">
         </div>
         <div class="image2">
-            <img src="../../../assets/002.jpg" style=" position:absolute;width: 3.8vw; margin-top: 3.1vh; border: 1px solid pink; padding: 0.5vw; margin-right: 6vw;" alt="">
+            <img src="../../../assets/002.jpg"
+                style=" position:absolute;width: 3.8vw; margin-top: 3.1vh; border: 1px solid pink; padding: 0.5vw; margin-right: 6vw;"
+                alt="">
         </div>
     </div>
     <div class="content">
@@ -16,7 +19,8 @@
         </div>
 
         <div class="writtenby">
-            <span style="font-weight: lighter; color: grey; font-size: 1.2rem;margin-bottom: vh; ">{{requiredBook?.author}}</span>
+            <span
+                style="font-weight: lighter; color: grey; font-size: 1.2rem;margin-bottom: vh; ">{{requiredBook?.author}}</span>
         </div>
         <div class="rating">
             <span style="background-color: rgb(9, 126, 9); padding-right: 1vw; color: white;">4.5
@@ -24,7 +28,8 @@
                 style="font-weight: lighter;margin-left: 0.25vw; color: grey;">(20)</span>
         </div>
         <div class="price">
-            <span style=" margin-top: 2vh; position: absolute; font-size: 1.5rem; font-weight: 400;"> {{requiredBook?.discountPrice}}
+            <span style=" margin-top: 2vh; position: absolute; font-size: 1.5rem; font-weight: 400;">
+                {{requiredBook?.discountPrice}}
                 <span class="line-through"> Rs.{{requiredBook?.price}}</span></span>
         </div>
         <div class="bookdetails" style="margin-top: 10vh;">
@@ -35,7 +40,9 @@
                 </ul>
             </span>
             <p style="font-weight: 200;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cupiditate ipsam, eveniet voluptas placeat magnam nemo ipsa consectetur qui est nihil deleniti excepturi molestias? Aliquam dolorum iste sunt quod consequatur?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cupiditate ipsam, eveniet voluptas placeat
+                magnam nemo ipsa consectetur qui est nihil deleniti excepturi molestias? Aliquam dolorum iste sunt quod
+                consequatur?
             </p>
         </div>
         <hr>
@@ -44,18 +51,19 @@
 
             <div class="c" style="height: 30vh; background-color:#F5F5F5;">
                 <span style="font-weight: 400; margin-top: 2vh; font-size: 1.5rem;">Overall rating</span><br>
-                <span style="margin-top:2vh ; position: absolute;"> <span style="font-size: 2vw;"> 
-                    <div class="star-rating">
-                        <mat-icon *ngFor="let star of stars" [class.filled]="star <= value" (click)="setValue(star)" >star</mat-icon>
-                      
-                          
-                    </div>
-                    
-                </span></span>
+                <span style="margin-top:2vh ; position: absolute;"> <span style="font-size: 2vw;">
+                        <div class="star-rating">
+                            <mat-icon *ngFor="let star of stars" [class.filled]="star <= value"
+                                (click)="setValue(star)">star</mat-icon>
+
+
+                        </div>
+
+                    </span></span>
                 <input type="text" [(ngModel)]="feedback" placeholder="Enter your feedback"
-       style="margin-top: 6.5vh; height: 10vh;width: 39.5vw; border: 0px solid black; ">
-                <button mat-raised-button color="primary"
-                    style="margin-left: 33.1vw; margin-top: 4vh; width: 6vw;" (click)="submitfeedback()">Submit</button>
+                    style="margin-top: 6.5vh; height: 10vh;width: 39.5vw; border: 0px solid black; ">
+                <button mat-raised-button color="primary" style="margin-left: 33.1vw; margin-top: 4vh; width: 6vw;"
+                    (click)="submitfeedback()">Submit</button>
             </div>
 
         </div>
@@ -84,36 +92,58 @@
                     reprehenderit necessitatibus?</p>
             </span>
             <div class="customers">
-               
+
                 <div *ngFor="let comment of comments" style="background-color: white;" class="comment">
                     <div class="circle"
-                    style="border: 1px black; border-radius: 50%; display:flex; background-color: lightgray; width: 2.5vw; height: 4vh; margin-top: 7.89vh;">
-                    <span style="margin-left: 0.5vw; margin-top: 1vh; color: gray;">AP</span><span
-                        style="display: inline; margin-left: 2vw; font-size: 1.2rem;">Arivind_Sp </span>
+                        style="border: 1px black; border-radius: 50%; display:flex; background-color: lightgray; width: 2.5vw; height: 4vh; margin-top: 7.89vh;">
+                        <span style="margin-left: 0.5vw; margin-top: 1vh; color: gray;">AP</span><span
+                            style="display: inline; margin-left: 2vw; font-size: 1.2rem;">Arivind_Sp </span>
+                    </div>
+
+                    <span>
+                        <ng-container *ngFor="let comment of comments">
+                            <mat-icon>star</mat-icon>
+                        </ng-container>
+                    </span>
+
+                    <span>
+                        <p>{{ comment.comment }}</p>
+                    </span>
                 </div>
-                 
-                <span>
-                    <ng-container *ngFor="let comment of comments">
-                      <mat-icon>star</mat-icon>
-                    </ng-container>
-                  </span>                  
-               
-                  <span>
-                    <p>{{ comment.comment }}</p>
-                  </span>
-                </div>
-              </div>
+            </div>
         </div>
 
     </div>
     <div class="images"
         style="border: 1px solid pink; width: 30vw; height: 65vh; display: flex; margin-left: 5vw; margin-top: -5vh;">
         <img src="../../../assets/001.jpg" style="margin: 3vw;  width: 25vw; height: 53vh;" alt="">
+        <div class="buttons-cnt">
+
+        </div>
+
         <div class="button"
             style="position: absolute; border:0; display: flex; height: 10vh; width: 31vw; margin-top: 66vh;">
-            <button mat-raised-button color="warn" style="width: 14vw;height: 7vh; background-color: #8F2B2F;"><span
-                    style="font-size: 1.4rem;">ADD TO BAG</span></button>
-            <button mat-button color="primary" style="background-color: #373434; width: 14vw; margin-left: 2vw; height: 7vh;"><span
+            <div class="buttons-cnt">
+                <button mat-raised-button color="primary" [ngStyle]="{'background-color': '#A03037'}" id="btn-cnt"
+                    (click)="addToCart()" *ngIf="addBookToCart else quantityUpdate" (click)="toggleButton()">ADD TO
+                    CART</button>
+                <ng-template #quantityUpdate>
+                    <div class="buttons">
+                        <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon"
+                            [ngStyle]="{'background-color': '#FAFAFA'}">
+                            <mat-icon style="color: black;">remove</mat-icon>
+                        </button>
+                        <button mat-raised-button color="primary" id="quantity"
+                            [ngStyle]="{'background-color': '#FAFAFA'}" style="color: black;">{{items}}</button>
+                        <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon"
+                            [ngStyle]="{'background-color': '#FAFAFA'}" id="add-btn">
+                            <mat-icon style="color: black;">add</mat-icon>
+                        </button>
+                    </div>
+                </ng-template>
+            </div>
+            <button mat-button color="primary"
+                style="background-color: #373434; width: 12vw; margin-left: 2vw; height: 5vh;"><span
                     style="font-size: 1.4rem;"> 🤍 WISHLIST</span></button>
         </div>
     </div>

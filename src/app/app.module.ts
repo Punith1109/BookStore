@@ -16,16 +16,21 @@ import { BooksComponent } from './Mycomponents/books/books.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { BookstoreComponent } from './Mycomponents/bookstore/bookstore.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { CartComponent } from './Mycomponents/cart/cart.component';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
+    BookstoreComponent,
     BooksContainerComponent,
     LoginComponent,
     BooksComponent,
-    BookstoreComponent
+    BookstoreComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
+    MatSelectModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,

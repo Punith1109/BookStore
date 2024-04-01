@@ -4,7 +4,7 @@ import { LoginComponent } from './Mycomponents/login/login.component';
 import { BooksContainerComponent } from './Mycomponents/books-container/books-container.component';
 import { BooksComponent } from './Mycomponents/books/books.component';
 import { BookstoreComponent } from './Mycomponents/bookstore/bookstore.component';
-
+import { CartComponent } from './Mycomponents/cart/cart.component';
 const routes: Routes = [
   {
     path: "",
@@ -21,6 +21,9 @@ const routes: Routes = [
       {
         path:"books/:id",
         component:BooksComponent
+      },{
+        path:"cart",
+        component:CartComponent
       }
     ]
   },

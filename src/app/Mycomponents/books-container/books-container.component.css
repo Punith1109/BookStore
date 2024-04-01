@@ -48,23 +48,24 @@ font-size: 4vh;
 }
 
 .book-box {
-    border: 2px solid black; 
-    margin-left: 0.5vw;
-    margin-bottom: 1vh;
+    border: 0.1px solid black; 
+    margin-left: 1.3vw;
+    margin-bottom: 3vh;
     width: 20vw;
     height: 55vh;
     overflow: hidden;
+    box-shadow: 100;
 }
 .cnt{
-    width: 100%; 
+    /* width: 80%;  */
     height: 10vh;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 .bookimage{
     position: absolute;
    width: 20vw;
    height:37vh;
-   background-color: rgb(229, 224, 224);
+   background-color:#DBDBDB;
     /* border: 1px soild green; */
 }
 .bookname{

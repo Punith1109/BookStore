@@ -1,7 +1,7 @@
 <div>
-    <div class="cnt" style="margin-left: 8.5vw; font-weight: lighter; display: flex;">
+    <div class="cnt" style="margin-left: 8.9vw; font-weight: lighter; display: flex;">
         <h2>Books</h2>
-        <mat-accordion class="expansion-cnt" style="position: absolute; width: 13vw; margin-left: 70vw; z-index: 1; margin-top: 1vh;">
+        <mat-accordion class="expansion-cnt" style="position: absolute; width: 13vw; margin-left: 69vw; z-index: 1; margin-top: 1vh;">
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
@@ -18,7 +18,8 @@
     <div class="books-container">
         <div *ngFor="let book of booksToDisplay" class="book-box" (click)="gotobooks(book._id)">
             <div class="bookimage">
-                <img src="../../../assets/001.jpg" style="margin-left: 3vw; margin-top: 2vh; width: 13vw;">
+                <img src="../../../assets/001.jpg" style="margin-left: 3vw; margin-top: 4vh; width: 13vw; height: 30vh;">
+                <p id="quick-view-cnt">QUICK VIEW</p>
             </div>
             <div class="content" style="margin-top: 38.5vh;">
                 <div class="bookname">

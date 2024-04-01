@@ -64,6 +64,8 @@ export class LoginComponent {
         console.log(result.result.accessToken);
         this.router.navigate(['/bookstore/dashboard'])}
       });
+      alert("User loggedin Successsfully")
+      
   }
 
   registerUser() {
