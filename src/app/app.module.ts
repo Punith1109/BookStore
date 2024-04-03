@@ -18,6 +18,8 @@ import { BookstoreComponent } from './Mycomponents/bookstore/bookstore.component
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { CartComponent } from './Mycomponents/cart/cart.component';
 import {MatSelectModule} from '@angular/material/select';
+import { CheckoutComponent } from './Mycomponents/checkout/checkout.component';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import {MatSelectModule} from '@angular/material/select';
     LoginComponent,
     BooksComponent,
     BookstoreComponent,
-    CartComponent
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatIconModule,
     MatExpansionModule,
     FormsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTableModule
 
   ],
   providers: [],

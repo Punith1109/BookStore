@@ -5,6 +5,7 @@ import { BooksContainerComponent } from './Mycomponents/books-container/books-co
 import { BooksComponent } from './Mycomponents/books/books.component';
 import { BookstoreComponent } from './Mycomponents/bookstore/bookstore.component';
 import { CartComponent } from './Mycomponents/cart/cart.component';
+import { CheckoutComponent } from './Mycomponents/checkout/checkout.component';
 const routes: Routes = [
   {
     path: "",
@@ -24,6 +25,9 @@ const routes: Routes = [
       },{
         path:"cart",
         component:CartComponent
+      },{
+        path:'checkout',
+        component:CheckoutComponent
       }
     ]
   },

@@ -1,0 +1,39 @@
+<div class="img">
+  <img src="../../../assets/checkout.png" class="checkoutimg" alt="">
+</div>
+<div class="order">
+  <span style="font-weight: 500; font-size: 1.4rem;">
+    <div style="margin-left:5vw;"> hurray!!! your order is conformed</div>
+    the order id is#123456 save the order id for <br><div style="margin-left: 5vw;">for further communication........</div>
+  </span>
+</div>
+<div class="table" style="width: 40vvw;">
+  <div class="example-container mat-elevation-z8" style="width: 60vw; margin-left: 20vw;">
+    <mat-table #table [dataSource]="dataSource">
+
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+      </ng-container>
+
+      <!-- Contact Column -->
+      <ng-container matColumnDef="contact">
+        <mat-header-cell *matHeaderCellDef> Contact Us </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.contact}} </mat-cell>
+      </ng-container>
+
+      <!-- Address Column -->
+      <ng-container matColumnDef="address">
+        <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>
+<div class="button" style="margin-left: 40vw; margin-top: 4vh;">
+  <button style="width: 15vw;" mat-flat-button color="primary">CONTINUE SHOPPING</button>
+</div>
