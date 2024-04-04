@@ -6,6 +6,7 @@ padding: 2vh;
     /* border: 1px solid black; */
     margin-left: 10vw;
     margin-right: 10vw;
+    margin-top: 10vh;
 }
 .cart{
     margin-top: 1vh ;
@@ -21,6 +22,7 @@ padding: 2vh;
 .mat-nav{
     margin-left: 20vw;
     height: 5vh;
+    margin-top: 3vh;
 }
 .img{
     width: 5vw;

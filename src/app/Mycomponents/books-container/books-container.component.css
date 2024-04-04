@@ -48,7 +48,7 @@ font-size: 4vh;
 }
 
 .book-box {
-    border: 0.1px solid black; 
+    border: 0.1px solid #DBDBDB; 
     margin-left: 1.3vw;
     margin-bottom: 3vh;
     width: 20vw;
@@ -113,4 +113,8 @@ font-size: 4vh;
 .img-cnt:hover #quick-view-cnt {
     display: block;
     cursor: pointer;
+}
+/* styles.css (or your component's specific CSS file) */
+.scroll-container {
+    overflow-y: hidden;
 }

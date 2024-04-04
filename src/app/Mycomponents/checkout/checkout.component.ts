@@ -15,6 +15,5 @@ export class CheckoutComponent {
   displayedColumns: string[] = ['email', 'contact', 'address'];
   dataSource: TableRow[] = [
     { email: 'admin@example.com', contact: '123-456-7890', address: '123 Street, City' },
-    { email: 'example2@example.com', contact: '456-789-1230', address: '456 Avenue, Town' },
   ];
 }

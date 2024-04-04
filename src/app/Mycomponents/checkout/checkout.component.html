@@ -1,31 +1,31 @@
-<div class="img">
+<div class="img" style="margin-top: vh;">
   <img src="../../../assets/checkout.png" class="checkoutimg" alt="">
 </div>
 <div class="order">
-  <span style="font-weight: 500; font-size: 1.4rem;">
+  <span style="font-weight: 400; color: rgb(40, 39, 39); font-size: 1.4rem;">
     <div style="margin-left:5vw;"> hurray!!! your order is conformed</div>
     the order id is#123456 save the order id for <br><div style="margin-left: 5vw;">for further communication........</div>
   </span>
 </div>
-<div class="table" style="width: 40vvw;">
+<div class="table" style="width: 40vvw; margin-top: 4vh;">
   <div class="example-container mat-elevation-z8" style="width: 60vw; margin-left: 20vw;">
     <mat-table #table [dataSource]="dataSource">
 
       <!-- Email Column -->
       <ng-container matColumnDef="email">
-        <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef style="background-color: #efeeee;"> Email </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="border: 1px solid #DBDBDB;"> {{element.email}} </mat-cell>
       </ng-container>
 
       <!-- Contact Column -->
       <ng-container matColumnDef="contact">
-        <mat-header-cell *matHeaderCellDef> Contact Us </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.contact}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef  style="background-color: #efeeee;"> Contact Us </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="height: 5vw; border: 1px solid #DBDBDB;"> {{element.contact}} </mat-cell>
       </ng-container>
 
       <!-- Address Column -->
       <ng-container matColumnDef="address">
-        <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef style="background-color: #efeeee;"> Address </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
       </ng-container>
 

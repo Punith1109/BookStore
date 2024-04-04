@@ -20,4 +20,7 @@ export class CartService {
   removebook(id:string){
     return this.httpservice.removebook(id);
   }
+  // updatequantity(){
+  //   return this.httpservice.updatecart();
+  // }
 }

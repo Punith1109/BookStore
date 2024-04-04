@@ -15,21 +15,23 @@
                 <mat-label>Email</mat-label><br>
               </div>
               <mat-form-field class="example-full-width" style="width: 100%;" appearance="outline">
-                <input formControlName="email" matInput placeholder="Enter Your Email" style="height: 2vh;">
+                <input formControlName="email" matInput placeholder="" style="height: 2vh;">
+                <div style="color:red;" *ngIf="submitted && f?.['email']?.errors?.['required'] ">Email is required</div>
               </mat-form-field>
-              <div style="color:red;" *ngIf="submitted && f?.['email']?.errors?.['required'] ">Email is required</div>
+              
               <div class="password"> <mat-label>Password</mat-label><br></div>
               <mat-form-field class="example-full-width" style="width: 100%;" appearance="outline">
-                <input formControlName="password" matInput placeholder="Enter Your Password" style="height: 2vh;">
+                <input formControlName="password" matInput placeholder="" style="height: 2vh;">
+                <div style="color:red;" *ngIf="submitted && f?.['password']?.errors?.['required'] ">Password is required
+                </div>
               </mat-form-field>
-              <div style="color:red;" *ngIf="submitted && f?.['password']?.errors?.['required'] ">Password is required
-              </div>
+              
               <div class="forgotpassword">
                 <mat-label>Forgot_Password?</mat-label>
               </div>
               <div class="loginbtn">
                 <button type="submit" mat-raised-button
-                  style="width: 26vw;  background-color: #A03037; margin-top: 3vh;" color="warn">
+                  style="width: 20vw;  background-color: #A03037; margin-top: 3vh;" color="warn">
                   Login</button>
               </div>
               <h3 style="font-weight: lighter; margin-top: 2vh; margin-left: 7vw;">_______OR_______</h3>
@@ -46,15 +48,13 @@
             <form class="example-form" [formGroup]="RegistrationForm" (ngSubmit)="registerUser()">
               <div class="fullname"><mat-label>Full name</mat-label><br></div>
 
-              <mat-form-field class="example-full-width" style="width: 25vw;" appearance="outline">
-                <input matInput formControlName="fullname" placeholder="" style="height: 2vh;">
-                <div style="color:red;" *ngIf="usubmitted && k?.['fullname']?.errors?.['required'] ">Name is
-                  required</div>
+              <mat-form-field class="example-full-width" style="width: ;" appearance="outline">
+                <input matInput formControlName="fullname" placeholder="" style="height: 2vh; width: 10vw; background-color: ;">
+                <div style="color:red; height: 2vh;" *ngIf="usubmitted && k?.['fullname']?.errors?.['required'] ">Name is
+                  required
+                </div>
               </mat-form-field>
-
-
-                <div class="emailid"> <mat-label>Email Id</mat-label><br></div>
-               
+               <div class="emailid"> <mat-label>Email Id</mat-label><br></div>
                 <mat-form-field class="example-full-width" style="width: 100%;" appearance="outline">
                   <input matInput formControlName="useremail" placeholder="" style="height: 2vh;">
                   <div style="color:red;" *ngIf="usubmitted && k?.['useremail']?.errors?.['required'] ">Email is

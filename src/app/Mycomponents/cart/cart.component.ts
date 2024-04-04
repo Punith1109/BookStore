@@ -27,6 +27,7 @@ export class CartComponent {
   totalcartbooks: number = 0;
   items: number[] = [];
   orderclicked:boolean=false;
+  totalamount:number[]=[]
 
   constructor(public cartservice: CartService,public router: Router) {}
 
@@ -39,21 +40,19 @@ export class CartComponent {
     this.cartservice.getBookListCall().subscribe((result: any) => {
       this.cartdetails = result.result;
       console.log(this.cartdetails);
-
       this.cartdetails.map((item: cartdetailsinterface) => {
         this.books.push(item.product_id);
-        this.items.push(item.quantity); // Push quantity of each book
+        this.items.push(1);
       });
     });
-
     this.totalcartbooks = this.books.length;
   }
 
   removebook(id: string, index: number) {
     this.cartservice.removebook(id).subscribe((result) => {
       this.books.splice(index, 1);
-      this.items.splice(index, 1); 
-      this.totalcartbooks--; 
+      this.items.splice(index, 1);
+      this.totalcartbooks--;
     });
   }
 
@@ -64,18 +63,23 @@ export class CartComponent {
 
   addOne(index: number) {
     this.items[index]++;
-    this.cartdetails[index].quantity++; 
+    this.cartdetails[index].quantity++;
+    alert(this.cartdetails[index].quantity)
+    this.totalamount[index]= this.cartdetails[index].product_id.discountPrice*this.items[index];
+    alert(this.totalamount)
   }
-  
-  removeOne(index: number) {
+
+  reduce(index: number) {
     if (this.items[index] > 0) {
       this.items[index]--;
-      this.cartdetails[index].quantity--; 
+      this.cartdetails[index].quantity--;
     }
   }
+
   checkout(){
     this.router.navigate(['/bookstore/checkout'])
   }
+
   ordersummary(){
     this.orderclicked=true
   }

@@ -1,18 +1,19 @@
-<div>
+<div style="width: 99%; margin-top: 12vh;">
     <div class="cnt" style="margin-left: 8.9vw; font-weight: lighter; display: flex;">
-        <h2>Books</h2>
+        <h2 style="font-weight: 300;">Books </h2><span style="font-size: 100 !important; width: 5vw; height: 2vh; margin-top: 3.5vh;"> (19 items)</span>
         <mat-accordion class="expansion-cnt"
             style="position: absolute; width: 13vw; margin-left: 69vw; z-index: 1; margin-top: 1vh;">
-            <mat-expansion-panel>
+            <mat-expansion-panel style="cursor: pointer;">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
                         Sort by relevance
                     </mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>Price : Low to High</p>
-                <p>Price : High to Low</p>
-                <p>Newest Arrivals</p>
+                <p (click)="lowToHigh()">Price : Low to High</p>
+                <p (click)="highToLow()">Price : High to Low</p>
+                <p (click)="newestArrivals()">Newest Arrivals</p>
             </mat-expansion-panel>
+            
         </mat-accordion>
     </div>
 

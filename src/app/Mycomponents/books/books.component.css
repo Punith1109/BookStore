@@ -1,8 +1,10 @@
 .main{
     /* border: 2px solid black; */
     height: 100%;
-    width: 100%;
+    overflow: hidden;
+    
 }
+
 .image1{
     /* margin-top: 30px; */
     height: 10vh;
@@ -23,7 +25,7 @@
 .content{
     display: inline;
     position: absolute;
-    margin-left: 39vw;
+    margin-left: 35vw;
     /* border: 2px solid red; */
     height: 140vh;
     width: 40vw;
@@ -46,6 +48,7 @@
     display: inline-block;
     color:white;
     font-size: 24px; /* Adjust as needed */
+    margin-left: 1vw;
   }
   
 .mat-icon {

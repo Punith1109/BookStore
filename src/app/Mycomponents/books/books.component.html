@@ -1,7 +1,11 @@
-<div class="header" style="height: 6vh; border: 2px solid green; margin-left: 8vw;">
-    <span routerLink="/bookstore/dashboard" style="color: lightgrey;">Home/</span> <span>Books</span>
+<div class="header" style="height: 6vh; margin-left: 8vw; margin-top:8vh;">
+
 </div>
-<div class="main" style="margin-left: 8vw;">
+<div style="height: 6vh; margin-left: 8vw; margin-top:0 ;">
+    <span routerLink="/bookstore/dashboard" style="color: lightgrey; cursor: pointer; margin-top: 10vh">Home/</span>
+    <span>Book(01)</span>
+</div>
+<div class="main" style="margin-left: 8vw; margin-top: 1vh;">
     <div class="sideimages" style="display: flex; height: 5vh; width: 4vw;">
         <div class="image1" style="">
             <img src="../../../assets/001.jpg"
@@ -50,19 +54,18 @@
             <h2 style="font-size: 1.9rem; font-weight: 200; ">Customer Feedback</h2>
 
             <div class="c" style="height: 30vh; background-color:#F5F5F5;">
-                <span style="font-weight: 400; margin-top: 2vh; font-size: 1.5rem;">Overall rating</span><br>
+                <span style="font-weight: 400; margin-top: 2vh; font-size: 1.5rem; padding: 1vw;">Overall
+                    rating</span><br>
                 <span style="margin-top:2vh ; position: absolute;"> <span style="font-size: 2vw;">
                         <div class="star-rating">
                             <mat-icon *ngFor="let star of stars" [class.filled]="star <= value"
                                 (click)="setValue(star)">star</mat-icon>
-
-
                         </div>
 
                     </span></span>
                 <input type="text" [(ngModel)]="feedback" placeholder="Enter your feedback"
-                    style="margin-top: 6.5vh; height: 10vh;width: 39.5vw; border: 0px solid black; ">
-                <button mat-raised-button color="primary" style="margin-left: 33.1vw; margin-top: 4vh; width: 6vw;"
+                    style="margin-top: 6.5vh; height: 10vh;width: 37vw; border: 0px solid black; margin-left: 1vw; margin-right: 2vw;">
+                <button mat-raised-button color="primary" style="margin-left: 33.1vw; margin-top: 2vh; width: 6vw;"
                     (click)="submitfeedback()">Submit</button>
             </div>
 
@@ -115,8 +118,8 @@
 
     </div>
     <div class="images"
-        style="border: 1px solid pink; width: 30vw; height: 65vh; display: flex; margin-left: 5vw; margin-top: -5vh;">
-        <img src="../../../assets/001.jpg" style="margin: 3vw;  width: 25vw; height: 53vh;" alt="">
+        style="border: 1px solid pink; width: 25vw; height: 65vh; display: flex; margin-left: 5vw; margin-top: -5vh;">
+        <img src="../../../assets/001.jpg" style="margin: 3vw; margin-left: 3vw;  width: 20vw; height: 50vh;" alt="">
         <div class="buttons-cnt">
 
         </div>
@@ -124,8 +127,8 @@
         <div class="button"
             style="position: absolute; border:0; display: flex; height: 10vh; width: 31vw; margin-top: 66vh;">
             <div class="buttons-cnt">
-                <button mat-raised-button color="primary" [ngStyle]="{'background-color': '#A03037'}" id="btn-cnt"
-                    (click)="addToCart()" *ngIf="addBookToCart else quantityUpdate" (click)="toggleButton()">ADD TO
+                <button mat-raised-button color="primary" [ngStyle]="{'background-color': '#A03037','width': '12vw'}"
+                    id="btn-cnt" (click)="addToCart()" *ngIf="addBookToCart else quantityUpdate" (click)="toggleButton()">ADD TO
                     CART</button>
                 <ng-template #quantityUpdate>
                     <div class="buttons">
@@ -143,8 +146,8 @@
                 </ng-template>
             </div>
             <button mat-button color="primary"
-                style="background-color: #373434; width: 12vw; margin-left: 2vw; height: 5vh;"><span
-                    style="font-size: 1.4rem;"> 🤍 WISHLIST</span></button>
+                style="background-color: #373434; width: 12vw; margin-left: 1vw; height: 5vh;"><span
+                    style="font-size: 1rem;"> 🤍 WISHLIST</span></button>
         </div>
     </div>
 

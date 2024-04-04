@@ -54,6 +54,19 @@ export class BooksComponent implements OnInit {
       });
     });
   }
+  // updateQuantity(quantity: number) {
+  //   this.cartservice.updatequantity(this.bookId, quantity).subscribe((result: any) => {
+  //     if (result && result.result && result.result._id) {
+  //       this.cartbooks.push(result.result._id);
+  //       this.addBookToCart = !this.addBookToCart;
+  //       console.log(this.cartbooks);
+  //     } else {
+  //       console.log("No _id found in result:", result);
+  //     }
+  //   }, (error) => {
+  //     console.log("Error occurred:", error);
+  //   });
+  // }
 
   findBookById(id: string | null): Book | null {
     if (!id) return null;
@@ -112,6 +125,7 @@ setValue(star:number){
       this.cartservice.addToCart(this.bookId).subscribe((result:any)=>{   
         if(result && result.result && result.result._id) {
           this.cartbooks.push(result.result._id); 
+          this.addBookToCart = !this.addBookToCart;
           console.log(this.cartbooks);
         } else {
           console.log("No _id found in result:", result);
@@ -124,8 +138,5 @@ setValue(star:number){
       console.log("No bookId found.");
     }
   }
-  
-  
-  
   
 }

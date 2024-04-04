@@ -42,4 +42,7 @@ addCart(id: string){
  getcartbooks(){
   return this.http.get(`${this.baseUrl}/bookstore_user/get_cart_items`,{headers:this.authHeader})
  }
+ updateCartQuantity(id:string,data:any){
+  return this.http.put(`${this.baseUrl}/cart_item_quantity/${id}`,data,{headers:this.authHeader});
+}
 }

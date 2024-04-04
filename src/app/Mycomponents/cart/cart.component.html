@@ -1,6 +1,6 @@
 <div class="main">
     <div class="nav-cnt">
-        <span routerLink="/bookstore/dashboard">Home/ </span><span>My cart</span>
+        <span routerLink="/bookstore/dashboard" style="cursor: pointer;">Home/ </span><span>My cart</span>
     </div>
     <div class="cart">
         <span class="mycart">MYCART {{totalcartbooks}}</span>
@@ -26,15 +26,16 @@
                         <span class="line-through">Rs. {{book.price}}</span></span>
                 </div>
                 <div style="display:flex; margin-top: 6vh;">
-                    <button style="border-radius:50%; border:1px solid #DBDBDB; width:2vw;height: 4vh;">-</button>
+                    <button style="border-radius:50%; border:1px solid #DBDBDB; width:2vw;height: 4vh;"
+                        (click)="reduce(i)">-</button>
                     <div
                         style="width:3.5vw; display: flex; justify-content: center; align-items: center; border: 1px solid #DBDBDB;">
                         {{items[i]}}
                     </div>
                     <button style="border-radius:50%; border:1px solid #DBDBDB; width:2vw; height: 4vh;"
                         (click)="addOne(i)">+</button>
-                    <label style="margin-left: 5vw;" (click)="removebook(cartdetails[i]._id,i)"
-                        (click)=" removeOne(i)">Remove</label>
+                    <label style="margin-left: 5vw; cursor: pointer;"
+                        (click)="removebook(cartdetails[i]._id,i)">Remove</label>
                 </div>
 
             </div>
@@ -42,14 +43,15 @@
         <div class="button"><button mat-flat-button color="primary" (click)="placeorder()">PLACE ORDER</button></div>
     </div>
 
-    <div class="address" style="" >
+    <div class="address" style="">
         <div class="ddress" *ngIf="!isOrderPlaced">
             Address Details
         </div>
         <div class="addressform" *ngIf="isOrderPlaced" style="height: auto;">
             <div class="customer" style="display: flex; flex-direction: row;">
                 <span style="font-size: 1.4rem; width: 10vw; padding: 1vw;">Customer_Details</span>
-                <div class="addnewaddress" style="border: 1px solid red; width: 10vw; height: 2.5vh; margin-left: 23vw; color: red;padding: 1vw; margin-top: 1.5vh;">
+                <div class="addnewaddress"
+                    style="border: 1px solid red; width: 10vw; height: 2.5vh; margin-left: 23vw; color: red;padding: 1vw; margin-top: 1.5vh;">
                     Add New Addres
                 </div>
             </div>
@@ -63,10 +65,10 @@
                     <input type="text" style="height: 7vh; width: 20vw;">
                 </div>
             </div>
-            <div class="work" style="padding: 1vw;">
+            <div class="work" style="padding-left: 1vw;">
                 <span>Work</span><span style="color: red; margin-left: 2vw;"> Edit</span>
             </div>
-            <div class="address" style="padding: 1vw;">
+            <div class="address" style="padding-left: 1vw;">
                 <span style="height: 2vh;">Address</span>
                 <div class="address-div">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo necessitatibus voluptate
@@ -90,7 +92,7 @@
                 </div>
             </div>
 
-            <div class="home" style="margin-top: 5vh; padding: 1vw;">
+            <!-- <div class="home" style="margin-top: 5vh; padding: 1vw;">
                 <span>2.Home</span>
                 <div class="address2">
                     <div class="a" style="margin-top: 3vh;">Address</div>
@@ -101,7 +103,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> -->
             <div class="type" style="margin-top: 2vh; margin-bottom: 1vw; padding: 1vw;">
                 <span>Type</span><br>
                 <div class="type2" style="display: flex;margin-top: 2vh;">
@@ -138,9 +140,12 @@
                         style=" margin-left: 1vw; margin-top: 1.25vh; position: absolute; font-weight: light;">Rs.{{book.discountPrice}}
                         <span class="line-through">Rs. {{book.price}}</span></span>
                 </div>
+                <div class="totalamount" style="margin-top: 2vh; height: 3vh;width: 9vw; margin-left: 20vw; ">
+                   Total Amount:{{totalamount[i]}}
+                </div>
             </div>
         </div>
-        <button mat-flat-button color="primary" style="margin-left: 43vw; width: 8vw;"
+        <button mat-flat-button color="primary" style="margin-left: 38vw; width: 8vw; margin-bottom: 2vh;"
             (click)="checkout()">CHECKOUT</button>
     </div>
 </div>
