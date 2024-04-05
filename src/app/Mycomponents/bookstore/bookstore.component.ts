@@ -28,7 +28,7 @@ export class BookstoreComponent {
 
   logout(){
     this.router.navigate(['localhost:4200'])
-    alert(localStorage.getItem('token'))
+    window.location.reload()
     localStorage.removeItem('token')
   }
 }

@@ -58,23 +58,24 @@ export class CartComponent {
 
   placeorder() {
     this.isOrderPlaced = true;
-    this.totalcartbooks = this.books.length;
+    // this.totalcartbooks = this.books.length;
   }
 
   addOne(index: number) {
     this.items[index]++;
     this.cartdetails[index].quantity++;
-    alert(this.cartdetails[index].quantity)
-    this.totalamount[index]= this.cartdetails[index].product_id.discountPrice*this.items[index];
-    alert(this.totalamount)
+    this.totalamount[index] = this.cartdetails[index].product_id.discountPrice * this.items[index];
+    this.totalcartbooks++; // Increase totalcartbooks when adding one book
   }
-
+  
   reduce(index: number) {
     if (this.items[index] > 0) {
       this.items[index]--;
       this.cartdetails[index].quantity--;
+      this.totalcartbooks--; // Decrease totalcartbooks when reducing one book
     }
   }
+  
 
   checkout(){
     this.router.navigate(['/bookstore/checkout'])

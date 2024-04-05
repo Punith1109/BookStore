@@ -6,6 +6,10 @@ import { BooksComponent } from './Mycomponents/books/books.component';
 import { BookstoreComponent } from './Mycomponents/bookstore/bookstore.component';
 import { CartComponent } from './Mycomponents/cart/cart.component';
 import { CheckoutComponent } from './Mycomponents/checkout/checkout.component';
+
+// Import the authentication guard function
+import { authGuard } from './Service/auth.guard';
+
 const routes: Routes = [
   {
     path: "",
@@ -14,6 +18,7 @@ const routes: Routes = [
   {
     path:"bookstore",
     component:BookstoreComponent,
+    canActivate: [authGuard], // Apply authentication guard to the parent route
     children:[
       {
         path:"dashboard",
