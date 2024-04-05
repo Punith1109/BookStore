@@ -12,6 +12,10 @@ export class BookstoreComponent {
 
   constructor(private router: Router,private searchService: SearchService) {}
 
+  ngOnInit():void{
+    
+  }
+
   goToCartPage(): void {
     this.router.navigate(['/bookstore/cart']); 
   }
@@ -20,5 +24,11 @@ export class BookstoreComponent {
   }
   bookstore(){
     this.router.navigate(['/bookstore/dashboard'])
+  }
+
+  logout(){
+    this.router.navigate(['localhost:4200'])
+    alert(localStorage.getItem('token'))
+    localStorage.removeItem('token')
   }
 }

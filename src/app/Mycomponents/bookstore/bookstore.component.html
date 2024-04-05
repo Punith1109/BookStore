@@ -7,11 +7,11 @@
             <h2 style="font-weight: lighter; cursor: pointer;" (click)="bookstore()">Bookstore</h2>
         </div>
     </div>
-    <input type="search" placeholder="  search......" style="font-size: 2.45vh;" id="search" >
+    <input type="search" placeholder="  search......" style="font-size: 2.45vh;" id="search" [(ngModel)]="searchQuery" (input)="updateSearch()" >
 
     <div class="icons" style="display: flex; flex-direction: row;">
         <div
-            style="margin-top: 7vh; display: flex; margin-left:6.7vw; position: absolute; color: white; font-weight: 150;">
+            style="margin-top: 7vh; display: flex; margin-left:6.7vw; position: absolute; color: white; font-weight: 150;" (click)="logout()">
             Profile</div>
         <mat-icon aria-hidden="false" aria-label="Example person icon" style="color: white;font-size:4vh ; left:3vw"
             fontIcon="person" id="person-icon">
@@ -29,9 +29,7 @@
 </div>
 
 <router-outlet></router-outlet>
-<!-- <div class="sample" style="width: 40vw;">
-    <h1>HII</h1>
-</div> -->
+
 <div class="footer" style="width:auto;" >
     <div class="container" style="width: 100%; background-color: black; ">
         <div class="content" style="width: 100%;">

@@ -31,7 +31,7 @@ export class BooksContainerComponent {
   booksToDisplay: Book[] = [];
   sortCriteria: string = '';
 
-  constructor(public productservice: ProductService, public router: Router) {
+  constructor(public productservice: ProductService, public router: Router,private searchService: SearchService ) {
     this.productservice.getbooks().subscribe((result: any) => {
       this.books = result.result;
       this.totalBooks = this.books.length;
@@ -41,8 +41,11 @@ export class BooksContainerComponent {
   }
 
   ngOnInit(): void {
+    this.searchService.searchQuery$.subscribe(query => {
+      this.searchquery = query;
+      this.getDisplayedBooks();
+    });
   }
-
   gotobooks(bookId: string) {
     console.log(bookId);
     this.router.navigate(['/bookstore/books', bookId]);
@@ -95,7 +98,7 @@ export class BooksContainerComponent {
   newestArrivals() {
     this.sortBooks('newestArrivals');
   }
-  onSearch():void{
+  onSearch(): void {
     this.getDisplayedBooks();
   }
 }

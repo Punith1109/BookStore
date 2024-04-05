@@ -2,10 +2,10 @@
     width: 100%;
     background-color:#A03037;
     height: 10vh;
+    overflow: hidden;
    
 }#search{
     justify-items: center;
-    /* display: flex; */
     margin-left: 25vw;
     width: 35vw;
     height: 6vh;
